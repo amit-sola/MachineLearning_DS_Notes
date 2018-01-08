@@ -8,12 +8,48 @@ This site extracts most of the elements from [EliteDataScience](https://elitedat
 
 ### ML interview questions on  
 
-1. Algorithms and Theory
+1. [Algorithms and Theory](##1. Algorithms and Theory)
 2. ML models
+...
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
 
 ## 1. Algorithms and Theory
 
 Q1- What’s the trade-off between bias and variance?
 
 
-[foo](#foo)
+
