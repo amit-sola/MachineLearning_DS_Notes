@@ -8,7 +8,7 @@ This site extracts most of the elements from [EliteDataScience](https://elitedat
 
 ### ML interview questions on  
 
-1. [Algorithms and Theory](##1. Algorithms and Theory)
+1. [Algorithms and Theory](#1. Algorithms and Theory)
 2. ML models
 ...
 .
