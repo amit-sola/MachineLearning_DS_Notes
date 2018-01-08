@@ -4,7 +4,7 @@ This site extracts most of the elements from [EliteDataScience](https://elitedat
 
 ## I have divided this post into multiple sections, details of which I will be adding gradually.
 
-
+## foo
 
 ### ML interview questions on  
 
@@ -14,3 +14,6 @@ This site extracts most of the elements from [EliteDataScience](https://elitedat
 ## 1. Algorithms and Theory
 
 Q1- What’s the trade-off between bias and variance?
+
+
+[foo](#foo)
