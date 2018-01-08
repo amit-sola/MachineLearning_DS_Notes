@@ -1,3 +1,4 @@
-# New Document
+# Adding some important concepts/questions/notes helpful in interview preperation.
 
-It's very easy to make some words **bold** and other words *italic* with Markdown. You can even [link to Google!](http://google.com)
+This site extracts most of the elements from [EliteDataScience](https://elitedatascience.com/machine-learning-interview-questions-answers). 
+
