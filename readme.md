@@ -18,7 +18,9 @@ Bias is an error due to generalization (under fitting), variance is the error du
 
 
 Train set error  in row 1 and Dev set error in row 2
-| High variance        | High bias           | High Bias and High Variance  | Low bias and Low variance  |
+
+
+| High variance | High bias| High Bias and High Variance| Low bias and Low variance  |
 | :---: |:---:|:---:|:---:|
 | 1%     |15% | 15% |0.5% |
 | 11%     | 16%    |   30% |1% |
