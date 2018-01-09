@@ -67,3 +67,15 @@ Precision=TP/(TP+FP). Out of positive predicted, how many are actually positive.
 
 
 ![Confusion Matrix](https://image.slidesharecdn.com/petutorial-150413084118-conversion-gate01/95/performance-evaluation-for-classifiers-tutorial-16-638.jpg?cb=1428914518)
+
+**Q6. What is Bayes Theorem**
+
+Its nothing but answering the question : If my test were positive, whats the probability to trust the test, i.e. whats the true positive rate.
+
+P(A/X)=TP/(TP+FP)
+
+
+![Bayes Theorem](https://i.imgur.com/yJbZWGA.png)
+
+
+![Bayes Theorem2](https://i.imgur.com/oarjKQq.png)
