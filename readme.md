@@ -16,12 +16,12 @@ This site extracts most of the elements from [EliteDataScience](https://elitedat
 
 Bias is an error due to generalization (under fitting), variance is the error due to too much complexity in the learning algorithm, i.e. over fitting.
 
+
 Train set error  in row 1 and Dev set error in row 2
 | High variance        | High bias           | High Bias and High Variance  | Low bias and Low variance  |
-| ------------- |:-------------:| -----:|-----:|
+| :---: |:---:|:---:|:---:|
 | 1%     |15% | 15% |0.5% |
 | 11%     | 16%    |   30% |1% |
-
  
 
 Ways to get rid of high bias in the neural network (Fit at least training set well): 
