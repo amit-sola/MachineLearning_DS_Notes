@@ -79,3 +79,7 @@ P(A/X)=TP/(TP+FP)
 
 
 ![Bayes Theorem2](https://i.imgur.com/oarjKQq.png)
+
+**Q6. What is Naive Bayes Classifier? **
+
+A better explanation is given in [Quora](https://www.quora.com/Why-is-naive-Bayes-naive?share=1)
