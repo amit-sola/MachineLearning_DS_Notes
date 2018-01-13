@@ -80,3 +80,45 @@ P(A/X)=TP/(TP+FP)
 **Q7. What is Naive Bayes Classifier?**
 
 A better explanation is given in [Quora](https://www.quora.com/Why-is-naive-Bayes-naive?share=1)
+
+
+**Q8- What’s the difference between Type I and Type II error?**
+Type I error are nothing but False Positives.
+Type II error are nothing but False Negatives
+
+**Q8. What’s the difference between a generative and discriminative model?**
+
+Generative classifiers learn a model of the joint probability, p( x, y), of the inputs x
+and the label y, and make their predictions by using Bayes rules to calculate p(ylx),
+and then picking the most likely label y. Discriminative classifiers model the posterior
+p(ylx) directly, or learn a direct map from inputs x to the class labels
+
+
+**Q9 What cross-validation technique would you use on a time series dataset?**
+A better explanation is given in [StackOverflow](https://stats.stackexchange.com/questions/14099/using-k-fold-cross-validation-for-time-series-model-selection)
+Instead of using standard k-folds cross-validation, you have to pay attention to the fact that a time series is not randomly distributed data — it is inherently ordered by chronological order. If a pattern emerges in later time periods for example, your model may still pick up on it even if that effect doesn’t hold in earlier years!
+
+You’ll want to do something like forward chaining where you’ll be able to model on past data then look at forward-facing data.
+
+fold 1 : training [1], test [2]
+fold 2 : training [1 2], test [3]
+fold 3 : training [1 2 3], test [4]
+fold 4 : training [1 2 3 4], test [5]
+fold 5 : training [1 2 3 4 5], test [6]
+
+**Q10- How is a decision tree pruned?**
+
+Pruning is a technique in machine learning that reduces the size of decision trees by removing sections of the tree that provide little power to classify instances. Pruning reduces the complexity of the final classifier, and hence improves predictive accuracy by the reduction of overfitting.
+
+It is hard to tell when a tree algorithm should stop because it is impossible to tell if the addition of a single extra node will dramatically decrease error. This problem is known as the horizon effect. 
+
+
+>*Pruning can occur in a top down or bottom up fashion.*
+
+A top down pruning will traverse nodes and trim subtrees starting at the root, while a bottom up pruning will start at the leaf nodes. Below are several popular pruning algorithms.
+
+Reduced error pruning is perhaps the simplest version: replace each node. If it doesn’t decrease predictive accuracy, keep it pruned.
+
+
+
+
