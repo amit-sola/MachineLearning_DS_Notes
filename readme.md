@@ -1,4 +1,4 @@
-# Adding some important concepts/questions/notes helpful in interview preparation.
+# Addi1g some important concepts/questions/notes helpful in interview preparation.
 
 This site extracts most of the elements from [EliteDataScience](https://elitedatascience.com/machine-learning-interview-questions-answers) and [SpringBoard](https://www.springboard.com/blog/machine-learning-interview-questions/).
 
@@ -119,6 +119,68 @@ A top down pruning will traverse nodes and trim subtrees starting at the root, w
 
 Reduced error pruning is perhaps the simplest version: replace each node. If it doesn’t decrease predictive accuracy, keep it pruned.
 
+**Q11- Which is more important to you– model accuracy, or model performance?**
+Depends on the usecase.
+For cancer detection you would want to be more accurate in pointing out the cancer patient.
+For fraud detection where minority of cases would be fraud, performance is the major factor, since a model prediction all cases as not fraud will have better accuracy while bad performance.
+
+**Q12- What is F1 Score ? How would you use it ?**
+The F1 score is a measure of a model’s performance. It is a weighted average of the precision and recall of a model, with results tending to 1 being the best, and those tending to 0 being the worst. You would use it in classification tests where true negatives don’t matter much.
+![F1](https://i.imgur.com/vxTaObT.png)
+
+ The F1 score is the harmonic average of the precision and recall, where an F1 score reaches its best value at 1 (perfect precision and recall) and worst at 0.
+ Its mostly used in IR.
+ The G-measure is the geometric mean.
+ 
+ **Q13- How would you handle an imbalanced dataset?**
+Look at [Machine Learning Masetry.](https://machinelearningmastery.com/tactics-to-combat-imbalanced-classes-in-your-machine-learning-dataset/)
+Tips
+* Collect More Data
+* Try Changing Your Performance Metric
+    *   Confusion Matrix: A breakdown of predictions into a table showing correct predictions (the       diagonal) and the types of incorrect predictions made (what classes incorrect predictions        were assigned).
+    *   Precision: A measure of a classifiers exactness.
+    * Recall: A measure of a classifiers completeness
+    *   F1 Score (or F-score): A weighted average of precision and recall.
+    *   ROC Curves: Like precision and recall, accuracy is divided into sensitivity and specificity and models can be chosen based on the balance thresholds of these values.
+*   Try Resampling Your Dataset
+*   Try Generate Synthetic Samples.
+
+**Q14 -When should you use classification over regression?**
+
+Regression: the output variable takes continuous values.
+
+Classification: the output variable takes class labels.
+
+**Q15 -When should you use classification over regression?**
+Ensembles are a divide-and-conquer approach used to improve performance. The main principle behind ensemble methods is that a group of “weak learners” can come together to form a “strong learner”
+
+The random forest takes this notion to the next level by combining trees with the notion of an ensemble. Thus, in ensemble terms, the trees are weak learners and the random forest is a strong learner.
+
+To use Bagging or Boosting you must select a base learner algorithm. For example, if we choose a classification tree, Bagging and Boosting would consist of a pool of trees as big as we want. 
+.
+In the case of Bagging, any element has the same probability to appear in a new data set. However, for Boosting the observations are weighted and therefore some of them will take part in the new sets more often: 
+
+![Bagging Vs Boosting](https://quantdare.com/wp-content/uploads/2016/04/bb3-1150x441.png)
+![VS](https://quantdare.com/wp-content/uploads/2016/04/bb2-1150x441.png)
+![](https://quantdare.com/wp-content/uploads/2016/04/bb4-1150x441.png)
+![](https://quantdare.com/wp-content/uploads/2016/04/bb5-1150x410.png)
+In Boosting algorithms each classifier is trained on data, taking into account the previous classifiers’ success. After each training step, the weights are redistributed. **Misclassified data increases its weights to emphasise the most difficult cases. In this way, subsequent learners will focus on them during their training.**
+
+**How does the classification stage work?**
+To predict the class of new data we only need to apply the N learners to the new observations.* In **Bagging** the result is obtained by averaging the responses of the N learners (or majority vote). However, **Boosting** assigns a second set of weights, this time for the N classifiers, in order to take a weighted average of their estimates.
+
+**Which is the best, Bagging or Boosting?**
+There’s not an outright winner; it depends on the data, the simulation and the circumstances.
+Bagging and Boosting decrease the variance of your single estimate as they combine several estimates from different models. So the result may be a model with higher stability.
+
+If the problem is that the single model gets a very low performance, Bagging will rarely get a better bias. However, Boosting could generate a combined model with lower errors as it optimises the advantages and reduces pitfalls of the single model.
+
+By contrast, if the difficulty of the single model is over-fitting, then Bagging is the best option. Boosting for its part doesn’t help to avoid over-fitting; in fact, this technique is faced with this problem itself. For this reason, Bagging is effective more often than Boosting.
 
 
-
+| Similarities       | Differences   |
+| :---: |:---:|
+| Both are ensemble methods to get N learners from 1 learner    |but, while they are built independently for Bagging, Boosting tries to add new models that do well where previous models fail |
+| Both generate several training data sets by random sampling    | but only Boosting determines weights for the data to tip the scales in favor of the most difficult cases    | 
+|Both make the final decision by averaging  the N learners (or taking the majority of them)|but it is an equally weighted average for Bagging and a weighted average for Boosting, more weight to those with better performance on training data.|
+|Both are good at reducing variance and provide higher stability| but only Boosting tries to reduce bias. On the other hand, Bagging may solve the over-fitting problem, while Boosting can increase it |
