@@ -225,5 +225,31 @@ There is a desired prediction problem but the model must learn the structures to
 Example problems are classification and regression.
 **Example algorithms are extensions to other flexible methods that make assumptions about how to model the unlabeled data.**
 
+**Q19- What is a Regression Algorithm.**
+Regression is concerned with modeling the relationship between variables that is iteratively refined using a measure of error in the predictions made by the model.
+![Regression](https://3qeqpr26caki16dnhd19sv6by6v-wpengine.netdna-ssl.com/wp-content/uploads/2013/11/Regression-Algorithms.png)
 
+The most popular regression algorithms are:
+*   Ordinary Least Squares Regression (OLSR)
+*   Linear Regression
+*   Logistic Regression
+*   Ridge Regression
+*   Stepwise Regression
+*   Multivariate Adaptive Regression Splines (MARS)
+*   Locally Estimated Scatterplot Smoothing (LOESS)
 
+**Q20- What is your understanding of Probablistic Models**
+
+*Frequentist and Bayesian Interpretations*
+***
+Frequentists interpret the **probability in terms of the outcome over multiple
+experiments in which the occurence of the event is monitored**. So for the
+coin example, the frequentist interpretation of the 0.5 probability is that if
+we toss a coin many times, almost half of the times we will observe a head. A
+drawback of this interpretation is the reliance on multiple experiments. But
+consider a different scenario. If someone claims that the probability of the
+polar ice cap melting by year 2020 is 10%, then the frequentist interpretation
+breaks down, because this event can only happen zero or one times. Unless,
+there are multiple parallel universes!
+![Basic](https://i.imgur.com/zAAtWAl.png)
+![Bayes](https://i.imgur.com/BcOZLRB.png)
