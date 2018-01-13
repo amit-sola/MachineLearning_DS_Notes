@@ -1,4 +1,4 @@
-# Addi1g some important concepts/questions/notes helpful in interview preparation.
+# Adding some important concepts/questions/notes helpful in interview preparation.
 
 This site extracts most of the elements from [EliteDataScience](https://elitedatascience.com/machine-learning-interview-questions-answers) and [SpringBoard](https://www.springboard.com/blog/machine-learning-interview-questions/).
 
@@ -151,7 +151,7 @@ Regression: the output variable takes continuous values.
 
 Classification: the output variable takes class labels.
 
-**Q15 -When should you use classification over regression?**
+**Q15 -Explain Ensemble Bagging Boosting?**
 Ensembles are a divide-and-conquer approach used to improve performance. The main principle behind ensemble methods is that a group of “weak learners” can come together to form a “strong learner”
 
 The random forest takes this notion to the next level by combining trees with the notion of an ensemble. Thus, in ensemble terms, the trees are weak learners and the random forest is a strong learner.
@@ -170,6 +170,7 @@ In Boosting algorithms each classifier is trained on data, taking into account t
 To predict the class of new data we only need to apply the N learners to the new observations.* In **Bagging** the result is obtained by averaging the responses of the N learners (or majority vote). However, **Boosting** assigns a second set of weights, this time for the N classifiers, in order to take a weighted average of their estimates.
 
 **Which is the best, Bagging or Boosting?**
+
 There’s not an outright winner; it depends on the data, the simulation and the circumstances.
 Bagging and Boosting decrease the variance of your single estimate as they combine several estimates from different models. So the result may be a model with higher stability.
 
@@ -184,3 +185,45 @@ By contrast, if the difficulty of the single model is over-fitting, then Bagging
 | Both generate several training data sets by random sampling    | but only Boosting determines weights for the data to tip the scales in favor of the most difficult cases    | 
 |Both make the final decision by averaging  the N learners (or taking the majority of them)|but it is an equally weighted average for Bagging and a weighted average for Boosting, more weight to those with better performance on training data.|
 |Both are good at reducing variance and provide higher stability| but only Boosting tries to reduce bias. On the other hand, Bagging may solve the over-fitting problem, while Boosting can increase it |
+
+**Q16 -How do you ensure you’re not overfitting with a model??**
+
+*   Keep Model Simpler
+*   Use Kfold cross validation
+*   Use better Regularization
+*   Use less features
+*   Chose a different Model. Ensemble ?
+![](https://qph.ec.quoracdn.net/main-qimg-9000c0e50e1a97d0d12e85dc93affa5f.webp)
+
+**Q17 -What evaluation approaches would you work to gauge the effectiveness of a machine learning model?**
+More reading: [How to Evaluate Machine Learning Algorithms (Machine Learning Mastery)](https://machinelearningmastery.com/how-to-evaluate-machine-learning-algorithms/)
+
+*   Test and Train Datasets
+*   Cross Validation
+    *   For example, a 3-fold cross validation would involve training and testing a model 3 times
+1: Train on folds 1+2, test on fold 3
+2: Train on folds 1+3, test on fold 2
+3: Train on folds 2+3, test on fold 1
+
+
+**Q18- List All ML algorithms  Grouped by Learning Style .**
+More read at [Machine Learning Mastery](https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/)
+![MLALGO](https://s3.amazonaws.com/MLMastery/MachineLearningAlgorithms.png?__s=9ns6a4sepp6hkbcfd1xv)
+
+Let’s take a look at three different learning styles in machine learning algorithms:
+*   1. Supervised Learning
+**Example problems are classification and regression.**
+Example algorithms include Logistic Regression and the Back Propagation Neural Network.
+*   2. Unsupervised Learning
+A model is prepared by deducing structures present in the input data.
+**Example problems are clustering, dimensionality reduction and association rule learning.**
+Example algorithms include: the Apriori algorithm,PCA and k-Means.
+
+*   3. Semi-Supervised Learning
+Input data is a mixture of labeled and unlabelled examples.
+There is a desired prediction problem but the model must learn the structures to organize the data as well as make predictions.
+Example problems are classification and regression.
+**Example algorithms are extensions to other flexible methods that make assumptions about how to model the unlabeled data.**
+
+
+
