@@ -81,7 +81,25 @@ P(A/X)=TP/(TP+FP)
 
 A better explanation is given in [Quora](https://www.quora.com/Why-is-naive-Bayes-naive?share=1)
 
+*What are the Pros and Cons of Naive Bayes?*
+Pros:
 
+*   It is easy and fast to predict class of test data set. It also perform well in multi class prediction
+*   When assumption of independence holds, a Naive Bayes classifier performs better compare to other models like logistic regression and you need less training data.
+*   It perform well in case of categorical input variables compared to numerical variable(s). For numerical variable, normal distribution is assumed (bell curve, which is a strong assumption).
+
+Cons:
+
+*   If categorical variable has a category (in test data set), which was not observed in training data set, then model will assign a 0 (zero) probability and will be unable to make a prediction. This is often known as “Zero Frequency”. To solve this, we can use the smoothing technique. One of the simplest smoothing techniques is called Laplace estimation.
+*   On the other side naive Bayes is also known as a bad estimator, so the probability outputs from predict_proba are not to be taken too seriously.
+*   Another limitation of Naive Bayes is the assumption of independent predictors. In real life, it is almost impossible that we get a set of predictors which are completely independent.
+
+**4 Applications of Naive Bayes Algorithms**
+*   Real time Prediction: Naive Bayes is an eager learning classifier and it is sure fast. Thus, it could be used for making predictions in real time.
+*   Multi class Prediction: This algorithm is also well known for multi class prediction feature. Here we can predict the probability of multiple classes of target variable.
+*   Text classification/ Spam Filtering/ Sentiment Analysis: Naive Bayes classifiers mostly used in text classification (due to better result in multi class problems and independence rule) have higher success rate as compared to other algorithms. As a result, it is widely used in Spam filtering (identify spam e-mail) and Sentiment Analysis (in social media analysis, to identify positive and negative customer sentiments)
+*   Recommendation System: Naive Bayes Classifier and Collaborative Filtering together builds a Recommendation System that uses machine learning and data mining techniques to filter unseen information and predict whether a user would like a given resource or not
+*   
 **Q8- What’s the difference between Type I and Type II error?**
 Type I error are nothing but False Positives.
 Type II error are nothing but False Negatives
@@ -251,5 +269,56 @@ consider a different scenario. If someone claims that the probability of the
 polar ice cap melting by year 2020 is 10%, then the frequentist interpretation
 breaks down, because this event can only happen zero or one times. Unless,
 there are multiple parallel universes!
+
 ![Basic](https://i.imgur.com/zAAtWAl.png)
+
+If my test were positive, whats the probability to trust the test, i.e. whats the true positive rate.
+P(A/X)=TP/(TP+FP)
+Condition probability of the result (P(A/X))based on prior probability of A (P(A)) and the conditional probability of the event ufor all A.
+
 ![Bayes](https://i.imgur.com/BcOZLRB.png)
+
+![](https://i.imgur.com/2FMLIYq.png)
+**In Probabilistic Model we try to learn the parameters that generates the data**
+![Liklehood](https://i.imgur.com/1KpT96i.png)
+• hˆprior - Most likely hypothesis based on prior
+• hˆMLE - Most likely hypothesis based on evidence
+• hˆMAP - Most likely hypothesis based on posterior
+
+
+![MapMle](https://i.imgur.com/kWLVjS4.png)
+
+
+*Steps for Learning a Generative Model*
+***
+• Example: D is a sequence of N binary values (0s and 1s) (coin tosses)
+• What is the best distribution that could describe D?
+• What is the probability of observing a head in future?
+
+![Bernoulli](https://i.imgur.com/XLlixCj.png)
+
+![derivation](https://i.imgur.com/MpLAosT.png)
+
+Look out for [notes on Naive Bayes](https://www.cse.buffalo.edu//~chandola/teaching/machinelearningdocs/partb3-scans.pdf), QDA, LDA by Professor Varun Chandola
+
+**Linear Regresion**  to predict continuous-valued quantities (e.g., housing prices) as a linear function of input values (e.g., the size of the house).
+y=W.x+c
+Cost Function
+![](https://i.imgur.com/KJLBKpT.png)
+Gradient
+![Gradient](https://i.imgur.com/DJIUASK.png)
+
+**Logistic Regression** to predict a discrete variable such as predicting whether a grid of pixel intensities represents a “0” digit or a “1” digit. This is a classification problem.
+*It is nothing but sigmoid of output predicted by linear regressor.*
+![](https://i.imgur.com/xp9y79L.png)
+Cost Function
+![](https://i.imgur.com/r7yv0Tb.png)
+Gradient
+![](https://i.imgur.com/B006b67.png)
+
+**Softmax Regression** Softmax regression (or multinomial logistic regression) is a generalization of logistic regression to the case where we want to handle multiple classes. In logistic regression we assumed that the labels were binary: y(i)∈{0,1}y(i)∈{0,1}. We used such a classifier to distinguish between two kinds of hand-written digits. Softmax regression allows us to handle y(i)∈{1,…,K}y(i)∈{1,…,K} where KK is the number of classes.
+
+**In Ridge Regression** Sum of Squared weight is added to cost as regularization.
+**In Lasso (Least Absolute Shrinkage and Selection Operator) Regression** Sum of Linear weight is added to cost as regularization.
+
+![Lnorm](https://i.imgur.com/ZVoR8ML.png)
