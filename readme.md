@@ -375,10 +375,12 @@ Support vectors can be extended to non linear boundaries with Kernel Trick
 Mapping to higher dimension space.
 ![](https://i.imgur.com/rxffNol.png)
 ![](https://i.imgur.com/bJTm15M.png)
+
 **Q23- Some tips for doing GD in practice?**
 *   All features must be on same scale.
     *   (xi-mean)/(max-min) This is mean normalization and makes a bell shaped mean square error cost function.
 *   Jd ie value of cost function should decrease on each iteration.
+
 **Q24- What are methods to solve for weights in Linear Regression?**
 *   Gradient Descent and variants
 *   Normal equation
