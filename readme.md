@@ -29,12 +29,17 @@ Ways to get rid of high bias in the neural network (Fit at least training set we
 2) Make Bigger network.
 3) Training Longer.
 4) Different Architecture.
+5) Adding features
+6) Decreasing lambda (regularization)
 
 After you get good performance on training set, you can proceed to improve performance on dev set, by improving variance.
+
 Ways to get improve variance in the neural network (Generalize well over the dev set): 
 1) More data.
 2) Better regularization.
 3) Different architecture.
+4) Try smaller set of features
+5) Increasing lambda
 
 **Q2 How is KNN different from k-means clustering?**
 
@@ -322,3 +327,70 @@ Gradient
 **In Lasso (Least Absolute Shrinkage and Selection Operator) Regression** Sum of Linear weight is added to cost as regularization.
 
 ![Lnorm](https://i.imgur.com/ZVoR8ML.png)
+
+**Q21- What do you know of SVM?**
+
+First understand Linear Classification via Hyperplanes
+• Separates a D-dimensional space into two half-spaces
+• Defined by w ∈ <D
+–Orthogonal to the hyperplane
+– This w goes through the origin
+
+For a hyperplane that passes through the origin, a point x will lie above the hyperplane if w>x > 0 and will lie below the plane if w>x < 0, otherwise.
+
+• Add a bias b
+– b > 0 - move along w
+– b < 0 - move opposite to w
+
+• For binary classification, w points towards the positive class
+Decision Rule
+y = sign(wTx + b)
+• w>x + b > 0 ⇒ y = +1
+• w>x + b < 0 ⇒ y = −1
+**1.2 Concept of Margin**
+
+• Margin is the distance between an example(Support vector) and the decision line
+Denoted by γ = (wTx+b) / ||w|| (positive points)  [add - sign for negative points]
+
+**Support Vector Machines**
+• A hyperplane based classifier defined by w and b
+•Find hyperplane with maximum separation margin on the training data
+• SVM learning task as an optimization problem
+• Find w and b that gives zero training error
+• Maximizes the margin (= 2/||w||)
+
+Same as minimizing ||w||/2
+Subject to y(wTx+b)>1 for negative both are negative and for positive both are positive.
+
+**This is constraint minimization problem**
+Solved by forming Lagrangian 
+![](https://i.imgur.com/ipy0x6i.png)
+
+Support vectors are points lying on the margin.
+![](https://i.imgur.com/Copobm0.png)
+
+Support vectors can be extended to non linear boundaries with Kernel Trick
+
+**Q22- What do you kernel trick?**
+Mapping to higher dimension space.
+![](https://i.imgur.com/rxffNol.png)
+![](https://i.imgur.com/bJTm15M.png)
+**Q23- Some tips for doing GD in practice?**
+*   All features must be on same scale.
+    *   (xi-mean)/(max-min) This is mean normalization and makes a bell shaped mean square error cost function.
+*   Jd ie value of cost function should decrease on each iteration.
+**Q24- What are methods to solve for weights in Linear Regression?**
+*   Gradient Descent and variants
+*   Normal equation
+    *   Theta=(Inversr(X'X))*X'Y. This can be solved directly from X and Y.
+    *   Sometimes not possible when taking inverse is not possible. We then take psuedo inverse.
+![](https://i.imgur.com/h8981q1.png)
+If X'X is not invertible
+*   Delete dependent features
+*   Use regularization
+
+
+
+
+
+
