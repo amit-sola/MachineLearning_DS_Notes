@@ -391,8 +391,38 @@ If X'X is not invertible
 *   Delete dependent features
 *   Use regularization
 
+**Q25 -PCA Vs. LDA?**
+PCA projects the entire dataset onto a different feature (sub)space, and LDA tries to determine a suitable feature (sub)space in order to distinguish between patterns that belong to different classes.
+
+A Summary of the PCA Approach
+*   Standardize the data.
+*   Obtain the Eigenvectors and Eigenvalues from the covariance matrix or correlation matrix, or perform Singular Vector Decomposition.
+*   Sort eigenvalues in descending order and choose the kk eigenvectors that correspond to the kk largest eigenvalues where kk is the number of dimensions of the new feature subspace (k≤dk≤d).
+*   Construct the projection matrix WW from the selected kk eigenvectors.
+*   Transform the original dataset XX via WW to obtain a kk-dimensional feature subspace YY.
+
+**Covariance or Correlation Matrix ?** 
+
+The eigendecomposition of the covariance matrix (if the input data was standardized) yields the same results as a eigendecomposition on the correlation matrix, since the correlation matrix can be understood as the normalized covariance matrix.
+
+eig_vals, eig_vecs = np.linalg.eig(cor_mat1)
+eig_vals, eig_vecs = np.linalg.eig(cov_mat)
 
 
+All three approaches yield the same eigenvectors and eigenvalue pairs:
 
+*   Eigendecomposition of the covariance matrix after standardizing the data.
+*   Eigendecomposition of the correlation matrix.
+*   Eigendecomposition of the correlation matrix after standardizing the data.
 
+**Singular Vector Decomposition**
+
+While the eigendecomposition of the covariance or correlation matrix may be more intuitiuve, most PCA implementations perform a Singular Vector Decomposition (SVD) to improve the computational efficiency. 
+
+u,s,v = np.linalg.svd(X_std.T)
+u is the eigeb vectors
+
+PCA with SVD
+
+![](https://i.imgur.com/eQwhCEu.png)
 
